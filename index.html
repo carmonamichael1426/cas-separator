@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Upload and Split File</title>
+      <!-- Title Icon -->
+      <link rel="icon" type="image/png" href="icon/middleware.svg" />
+      <!-- CSS -->
+      <link rel="stylesheet" type="text/css" href="css/style.css" />
+      <link rel="stylesheet" type="text/css" href="plugin/font-awesome-pro-5/css/all.min.css" />
+   </head>
+   <body>
+      <div id="upload_form">
+         <div id="file_drop_area" ondrop="dropHandler(event)" ondragover="dragOverHandler(event)">
+            <p>Drag and drop your text file here or</p>
+            <label for="file" class="btn-primary-1"><i class="fad fa-file-plus"></i> Browse text file</label>
+            <input type="file" name="file" id="file" accept=".txt" onchange="uploadFile()" style="display: none" />
+         </div>
+         <p id="file_name"></p>
+         <progress id="progressBar" value="0" max="100"></progress>
+         <h3 id="status"></h3>
+         <p id="loaded_n_total"></p>
+         <button type="button" class="btn-success-1" onclick="splitFile()"><i class="fas fa-line-columns"></i> Split</button>
+      </div>
+
+      <!-- JS -->
+      <script type="text/javascript" src="js/process_upload.js"></script>
+      <script type="text/javascript" src="js/sweetalert2.js"></script>
+      <script type="text/javascript" src="plugin/font-awesome-pro-5/js/pro.min.js"></script>
+   </body>
+</html>
