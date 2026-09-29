@@ -38,6 +38,8 @@ header('Content-Type: application/json'); // Ensure the response is JSON
 //     return array($filePath, $filePaths); // Return array with original file path and paths of created text files
 // }
 // Function to split the file into chunks and create separate text files
+
+#region splitAndCreateFiles
 function splitAndCreateFiles($filePath, $name)
 {
     // Read the content of the file, trim to remove any trailing newlines
